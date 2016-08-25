@@ -1,5 +1,5 @@
 package gcard.terminal;
-
+import gcard.*;
 import gcard.cadr.UserCard;
 import gcard.system.DataBase;
 
@@ -10,6 +10,7 @@ public class StoreTerminal extends Terminal {
 
     public StoreTerminal(UUID id, String address) {
         super(id, address);
+        DataBase.terminalList.add(this);
     }
 
     @Override
@@ -21,7 +22,7 @@ public class StoreTerminal extends Terminal {
                     if (!userCard.getIsStolen()) {
                         if (userCard.getBalance() - amount >= 0) {
                             userCard.doPayment(amount);
-                            System.out.println("Transaction Succeed");
+                            System.out.println("Transaction Succeed ");
                             break A;
                         } else {
                             System.out.println("Insufficient balance ");

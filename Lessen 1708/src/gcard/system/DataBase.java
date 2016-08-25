@@ -4,10 +4,8 @@ import gcard.cadr.UserCard;
 import gcard.terminal.Terminal;
 import gcard.user.User;
 
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class DataBase {
 

@@ -17,8 +17,9 @@ public class DataBase {
    public static List<List<String>> transactionList;
 
 
+
     static{
-        System.out.println("static");
+        System.out.println("static block");
           List<UserCard> cards = new ArrayList<UserCard>() ;
           List<User> registerUser = new ArrayList<User>();
           List<Terminal> terminalList = new ArrayList<Terminal>();

@@ -77,6 +77,6 @@ public class UserCard implements Payable,ICardAction {
     }
 
     public String toString(){
-        return "user: "+user+" Card Number: "+cardNumber+" Card ID: "+ id;
+        return "user: "+user+", Balance: "+balance+", Card Number: "+cardNumber+", Card ID: "+ id;
     }
 }

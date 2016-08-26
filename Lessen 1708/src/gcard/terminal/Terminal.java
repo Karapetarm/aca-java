@@ -40,6 +40,6 @@ public abstract class Terminal implements IPaymentReceiver {
     }
 
     public String toString(){
-        return "Terminal Number: "+terminalNumber+"  Address: "+address;
+        return "Terminal Number: "+terminalNumber+",  Address: "+address+", ID: "+id;
     }
 }

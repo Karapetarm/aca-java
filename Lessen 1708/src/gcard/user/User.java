@@ -1,7 +1,7 @@
 package gcard.user;
 
 
-import gcard.system.DataBase;
+import gcard.system.*;
 
 import java.util.UUID;
 
@@ -15,12 +15,10 @@ public class User {
         this.userName=userName;
         id=UUID.randomUUID();
         cardID=UUID.randomUUID();
-
+        DataBase.registerUser.add(this);
     }
 
-    public void registerUser(User user) {
-        DataBase.registerUser.add(user);
-    }
+
     public String getUserName() {
         return userName;
     }

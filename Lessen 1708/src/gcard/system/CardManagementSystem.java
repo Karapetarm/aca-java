@@ -13,13 +13,8 @@ public class CardManagementSystem implements DispatcherInterface {
     @Override
     public void issueNewCard(String userName,int startBalance) {
         User newUser= new User(userName);
-        newUser.registerUser(newUser);
         UserCard newCard =new UserCard(newUser,startBalance);
-        DataBase.cards.add(newCard);
-        DataBase.registerUser.add(newUser);
-        DataBase.transactionList.add(newCard.getCardNumber(),new ArrayList<String>());
-        newCard.topUp(startBalance);
-        System.out.println(newCard);
+        System.out.println("Created New card: "+newCard);
     }
 //    public void issueNewCard(User user,int startBalance) {
 //       UserCard newCard =new UserCard(user,startBalance);
@@ -39,12 +34,12 @@ public class CardManagementSystem implements DispatcherInterface {
         issueNewCard("",0);
     }
 
-   /*@Override
+    @Override
     public void registerCard(UserCard userCard) {
-        cards.add(userCard);
-        registerUser.add(userCard.getUser());
-        transactionList.add(userCard.getCardNumber(),new ArrayList<String>());
-    }*/
+        DataBase.cards.add(userCard);
+        DataBase.registerUser.add(userCard.getUser());
+        DataBase.transactionList.add(userCard.getCardNumber(),new ArrayList<String>());
+    }
 
     public static void processTransaction(UUID cardId, UUID terminalId, int amount) {
         for(Terminal terminal: DataBase.terminalList) {

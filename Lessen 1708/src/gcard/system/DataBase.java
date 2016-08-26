@@ -15,12 +15,12 @@ public class DataBase {
    public static List<List<String>> transactionList;
 
 
-
-    static{
+    static {
         System.out.println("static block");
-          List<UserCard> cards = new ArrayList<UserCard>() ;
-          List<User> registerUser = new ArrayList<User>();
-          List<Terminal> terminalList = new ArrayList<Terminal>();
-          List<List<String>> transactionList = new ArrayList<List<String>>();
+        cards = new ArrayList<UserCard>();
+        registerUser = new ArrayList<User>();
+        terminalList = new ArrayList<Terminal>();
+        transactionList = new ArrayList<List<String>>();
     }
+
 }
